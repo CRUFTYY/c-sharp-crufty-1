@@ -13,17 +13,18 @@ namespace ConsoleApp58
             string[] pos = new string[36];
             int c = 0;
             int op;
-            Console.WriteLine("| 0 |1 | 2 | 3 | 4 | 5 |");
-            Console.WriteLine("__________________________");
-            Console.WriteLine("| 6 |7 | 8 | 9 | 10 | 11 |");
-            Console.WriteLine("__________________________");
-            Console.WriteLine("| 12|13| 14 | 15 | 16 | 17 |");
-            Console.WriteLine("__________________________");
-            Console.WriteLine("| 18 |19 | 20 | 21 | 22 | 26 |");
-            Console.WriteLine("__________________________");
+            Console.WriteLine("    | 0 | 1 | 2 | 3 | 4 | 5 |");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("  | 6 | 7 | 8 | 9 | 10 | 11 |");
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("| 12 | 13 | 14 | 15 | 16 | 17 |");
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("| 18 | 19 | 20 | 21 | 22 | 26 |");
+            Console.WriteLine("-------------------------------");
             Console.WriteLine("| 27 |28 | 29 | 30 | 31 | 32 |");
-            Console.WriteLine("__________________________");
-            Console.WriteLine("| 33 |34  | 35 | 36 |");
+            Console.WriteLine("-------------------------------"); 
+            Console.WriteLine("    | 33 |34  | 35 | 36 |      ");
+            Console.WriteLine("-------------------------------");
             do
             {
                 Console.WriteLine("Ingresar valor entre 0 y 35");
