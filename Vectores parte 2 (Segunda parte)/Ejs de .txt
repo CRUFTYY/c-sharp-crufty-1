@@ -1,0 +1,5 @@
+1) Realizar un programa que permita ingresar 5 nombres de operarios y sus respectivos salarios. Mostrar el sueldo mayor y el nombre del operario 
+
+2) Realizar un programa que ingrese a un vector una X cantidad de numeros y que imprima el menor y un mensaje si se repite el numero dentro del vector 
+
+3) Realizar un programa que verifique cuando se forma una linea en un tablero de 3x3

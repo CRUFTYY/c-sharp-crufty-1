@@ -1,0 +1,22 @@
+Array (matriz o vector) es un conjunto finito y ordenado de elementos homogeneos. La propiedad "ordenado" significa que el elemento 1ro, 2do, 3ro,..., enésimo de un array pueden ser identificado. Los elementos del array son homogeneos, es decir, del mismo tipo de datos.
+       En otras palabras un arreglo es una especie de variable que contiene muchos valores, pero cada uno con una posicion diferente. Un arreglo puede ser unidimensional o vectorial, bidimensional o matricial, o multidimensional 
+
+Sintaxis:
+(Tipo de dato) (Nombre) = (Posiciones)  ;
+     String[ ]      |   vector     | new string[10]; 
+
+Sintaxis para guardar:
+Vector[ (posicion a guardar) ] = Console.ReadLine();
+Vector[0]=Conver.ToInt32(Console.ReadLine()); 
+
+EJERCITACION: 
+
+1) Crear un programa que lea y muestre 4 alumnos y sus notas finales de 3 materias y que indique al lado de su nota y su nombre si paso de año o no. (6 para pasar de año) 
+
+2) Crear un programa que pida a 5 clientes los nombres, apellidos, edad y sexo e indicar cuales son los nombres y los apellidos de las personas que tienen sexo femenino 
+
+3) Mostrar la suma de X cantidades de los precios de los productos ingresados por teclado 
+
+4) Crear un programa que muestra las notas del examen parcial, oral y final de 3 alumnos, si la suma es mayor a 16 (del examen parcial y oral) el alumno esta promocionado, si la suma es menor a 16 y mayor que 12 el alumno esta aprobado y debe rendir un complemento, si la suma es menor a 12 el alumno esta desaprobado, luego calcular el final (oral+parcial/2) 
+
+5) Crear un Programa que calcule y grafique el area de un cuadrado, rectangulo, y ademas que calcule y grafique el perímetro de un triangulo, un trapecio
