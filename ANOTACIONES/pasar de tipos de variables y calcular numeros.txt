@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //variables
+            int numero = 0;
+            int numero2 = 0;
+
+            float res;
+
+            //variables
+
+numero= int.parse(console.ReadLine);
+
+            Console.ReadKey();
+
+
+
+
+            Console.ReadKey();
+        }
+    }
+}

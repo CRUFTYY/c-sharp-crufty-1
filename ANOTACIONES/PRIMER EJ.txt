@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declaracion 
+            //    <tipo de variable> <nombre > = <valor> (opcional)
+            //int                    nombre       2
+            string palabra;
+            int hijos;
+  
+            Console.WriteLine("Escribi algo ");
+            palabra = Console.ReadLine();
+
+            //mostrar mensaje 
+            Console.WriteLine("La palabra / letra escrita es :  " + palabra);
+
+            //leer la linea 
+            Console.ReadKey();
+
+
+        }
+    }
+}

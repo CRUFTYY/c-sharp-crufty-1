@@ -1,0 +1,11 @@
+( 1 )  hacer un programa que calcule la division y su resto
+
+( 2 ) pasar de millas nautica a mts
+
+( 3 ) Crear un  programa que calcule el resto de dividir 301 / 3 
+
+( 4 ) Crear un programa que le pida al usuario 5 numeros y calcule el promedio de los mismos
+
+( 5 ) Crear un programa que calcule y muestre el 75% de un numero ingresado por el usuario 
+
+( 6 ) Crear un programa que lea 2 cadena de caracteres y las una 
