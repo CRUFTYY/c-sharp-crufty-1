@@ -11,9 +11,8 @@ namespace ConsoleApp2
         /// op 4 "animales impares " (cada animal es identificado con un chip numerico , se debe mostrar todos los atibutos de  los animales con chip numerico impar )
         /// El programa debe realizarse con todas las estructuras y vectores.El programa debe realizarse para "X" cantidad de animales ingresado 
         {
-            int a = 0;
             Console.WriteLine("Ingrese cantidad de animales ");
-            a = int.Parse(Console.ReadLine());
+            int a = int.Parse(Console.ReadLine());
 
             int op = 0;
             int[] cantdientes = new int[a];
@@ -29,7 +28,7 @@ namespace ConsoleApp2
 
             for (int i = 0; a > i; i++)
             {
-                Console.WriteLine("Ingrese cantidad de dientes del animal Nº: " + (i + 1 ));
+                Console.WriteLine("Ingrese cantidad de dientes del animal Nº: " + (i + 1));
                 cantdientes[i] = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("Ingrese cualidad del animal Nº: " + (i + 1));
@@ -46,97 +45,96 @@ namespace ConsoleApp2
 
             }
 
-            Console.WriteLine("1 - Animal peligroso");
-            Console.WriteLine("2 - Poner a dieta a los mamifero");
-            Console.WriteLine("3 - Reptil mas y menos comilon");
-            Console.WriteLine("4 - Animales impares");
-            op = int.Parse(Console.ReadLine());
             do
             {
-
-
-
+                Console.WriteLine("1 - Animal peligroso");
+                Console.WriteLine("2 - Poner a dieta a los mamifero");
+                Console.WriteLine("3 - Reptil mas y menos comilon");
+                Console.WriteLine("4 - Animales impares");
+                Console.WriteLine("");
+                Console.WriteLine("6 - Salir del programa");
+                op = int.Parse(Console.ReadLine());
                 switch (op)
                 {
 
                     case 1:
-                        for (int k = 0; a > k; k++)
+                        for (int k = 0; k < a;k++)
                         {
-                            Console.WriteLine("");
                             if (cualidad[k] == "venenoso" && especie[k] == "reptil" && cantdientes[k] <= 2 || cualidad[k] == "apestoso" && especie[k] == "reptil" && cantdientes[k] <= 2)
                             {
                                 Console.WriteLine("");
-                                Console.WriteLine("El animal" + "  " + id[k] + "  " + "es peligroso");
+                                Console.WriteLine("El animal " + id[k] + "  es peligroso");
                                 Console.WriteLine("");
                             }
                             else
                             {
                                 Console.WriteLine("");
-                                Console.WriteLine("El animal" + "  " + id[k] + "");
+                                Console.WriteLine("El animal " + id[k] + "  No es pelgroso ");
                                 Console.WriteLine("");
                             }
                         }
-
                         break;
-
-
                     case 2:
                         //mayor
-                        for (int c = 0; c < a; c++)
+                        for (int t = 0; t < a; t++)
                         {
-                            if (mayor > comidas[c])
+                            if (especie[t] == "reptil")
                             {
+                                for (int c = 0; c < a; c++)
+                                {
+                                    if (mayor > comidas[c])
+                                    {
 
-                                posmayor = c;
+                                        posmayor = c;
 
+                                    }
+
+                                }
+                                Console.WriteLine("");
+                                Console.WriteLine("Mayor");
+                                Console.WriteLine("Datos del animal que mas comida semanal comio");
+                                Console.WriteLine("El id  : " + id[posmayor]);
+                                Console.WriteLine("La cantidad de dientes : " + cantdientes[posmayor]);
+                                Console.WriteLine("Cualidad : " + cualidad[posmayor]);
+                                Console.WriteLine("Especie :  " + especie[posmayor]);
+                                Console.WriteLine("Cantidad de comida semanal " + comidas[posmayor]);
+                                Console.WriteLine("");
+
+                                //menor
+                                for (int l = 0; l < a; l++)
+                                {
+                                    if (mayor < comidas[l])
+                                    {
+
+                                        posmenor = l;
+
+                                    }
+
+                                }
+                                Console.WriteLine("");
+                                Console.WriteLine("Datos del animal que menos comida semanal comio");
+                                Console.WriteLine("El id  : " + id[posmenor]);
+                                Console.WriteLine("La cantidad de dientes : " + cantdientes[posmenor]);
+                                Console.WriteLine("Cualidad : " + cualidad[posmenor]);
+                                Console.WriteLine("Especie :  " + especie[posmenor]);
+                                Console.WriteLine("Cantidad de comida semanal " + comidas[posmenor]);
+                                Console.WriteLine("");
+                                
                             }
-
                         }
-                        Console.WriteLine("");
-                        Console.WriteLine("Mayor");
-                        Console.WriteLine("Datos del animal que mas comida semanal comio");
-                        Console.WriteLine("El id  : " + id[posmayor]);
-                        Console.WriteLine("La cantidad de dientes : " + cantdientes[posmayor]);
-                        Console.WriteLine("Cualidad : " + cualidad[posmayor]);
-                        Console.WriteLine("Especie :  " + especie[posmayor]);
-                        Console.WriteLine("Cantidad de comida semanal " + comidas[posmayor]);
-                        Console.WriteLine("");
-
-                        //menor
-                        for (int l = 0; l < a; l++)
-                        {
-                            if (mayor < comidas[l])
-                            {
-
-                                posmenor = l;
-
-                            }
-
-                        }
-                        Console.WriteLine("");
-                        Console.WriteLine("Datos del animal que menos comida semanal comio");
-                        Console.WriteLine("El id  : " + id[posmenor]);
-                        Console.WriteLine("La cantidad de dientes : " + cantdientes[posmenor]);
-                        Console.WriteLine("Cualidad : " + cualidad[posmenor]);
-                        Console.WriteLine("Especie :  " + especie[posmenor]);
-                        Console.WriteLine("Cantidad de comida semanal " + comidas[posmenor]);
-                        Console.WriteLine("");
                         break;
+
 
                     case 3:
                         for (int d = 0; d < a; d++)
                         {
-                            if (especie[d] == "mamifero")
-                            {
-                                comidas[d] = (comidas[d] * 25 / 100);
-                                Console.WriteLine("El id  : " + id[d]);
-                                Console.WriteLine("La cantidad de dientes : " + cantdientes[d]);
-                                Console.WriteLine("Cualidad : " + cualidad[d]);
-                                Console.WriteLine("Especie :  " + especie[d]);
-                                Console.WriteLine("Cantidad de comida semanal " + comidas[d]);
-                                Console.WriteLine("");
-                            }
-
+                            comidas[d] = (comidas[d] * 25 / 100);
+                            Console.WriteLine("El id  : " + id[d]);
+                            Console.WriteLine("La cantidad de dientes : " + cantdientes[d]);
+                            Console.WriteLine("Cualidad : " + cualidad[d]);
+                            Console.WriteLine("Especie :  " + especie[d]);
+                            Console.WriteLine("Cantidad de comida semanal " + comidas[d]);
+                            Console.WriteLine("");
                         }
                         break;
 
@@ -154,8 +152,8 @@ namespace ConsoleApp2
 
                             }
                         }
-                        break; 
-            }
+                        break;
+                }
             }
             while (op != 6);
         }

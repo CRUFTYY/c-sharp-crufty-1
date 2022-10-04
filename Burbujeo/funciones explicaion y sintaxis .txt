@@ -1,0 +1,23 @@
+Un problema complejo se puede dividir en pequeños sub-Problemas mas sencillos. Estos Sub-Problemas se conocen como módulos y su implementacion en un lenguaje que se llama Sub-Programa realiza las mismas acciones que un programa sin embargo, vamos a utilizar el sub-programa o módulo para una accion u operacion específica. Un Sub-Programa recibe datos de un programa y devuelve resultados (El programa llama o invoca al sub-programa, este ejecuta una tarea específica y devuelve el control al programa que lo llamó). 
+
+    En C# a las funciones o procedimientos se los conoce con el nombre de Métodos. 
+
+    Las declaraciones de las funciones, generalmente son especificadas: 
+
+[  ] Un Nombre único en el ámbito: Nombre de la funcion con el que se identifica y se distingue de otras, no podrá hacer otra función o procedimiento con ese nombre.
+[  ] Un tipo de dato de Retorno: Tipo de dato que devolverá la función al terminar su ejecución.
+[  ] Una lista de parametros: Especificacion del conjunto de argumentos (pueden ser 0, 1 o más) 
+
+Sintaxis lol 
+
+Namespace{
+      Class Program{
+           Static Void Vergoglio(){
+                  Console.WriteLine("Ver- Vergoglio!!");
+            }
+           Static Void Main (String[]Args){
+                 Vergoglio();
+                 Vergoglio();
+           }
+      }
+}
