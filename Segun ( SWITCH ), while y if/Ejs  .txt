@@ -1,0 +1,19 @@
+1) Crear un programa que pida un numero al usuario. si es positivo, escribir en pantalla (el numero es positivo) si el numero es negativo o 0 no hace nada.
+
+2) Crear un programa que pida al usuario un numero entero y diga si es par.
+
+3) Crear un programa que pida al usuario 2 numeros enteros y diga cual es el mayor.
+
+4) Crear un programa que pida al usuario 3 numeros enteros y diga cual es el mayor.
+
+5) Crear un programa que pida 2 numeros enteros y diga si el primero es multiplo del segundo.
+
+6) Crear un programa que diga si 2 numeros ingresados por el usuario son iguales a 0.
+
+7) Crear un programa que pida al usuario un numero entero y diga si es multiplo de 2 o de 3.
+
+8) Crear un programa que pida un numero entero y diga si es multiplo de 2 y de 3 simultaneamente.
+
+9) Crear un programa que pida al usuario un nombre y debe indicar si dicho nombre coincide con Cristian.
+
+10) Crear un programa que pida nombre y apellido e indique si coincide con Federico Perez (solamente realizar con if anidados).
