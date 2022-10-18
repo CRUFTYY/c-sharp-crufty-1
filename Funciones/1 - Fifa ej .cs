@@ -1,18 +1,20 @@
-﻿
-using System;
+﻿using System;
 ///En la fifa se necesita desarrollar un programa que permita controlar el desarrollo de un torneo para esto son necesarias las siguientes funciones:
 ///a) la función "PosibleCampeon()" (esta función muestra una tabla con todos los nombres de los equipos y al lado muestra un mensaje que dice "es un posible
 ///campeón", para ser un posbile campeón se tienen en cuenta la cantidad de goles realizados, los puntos del torneo y la cantidad de partidos jugados.
 ///Si la cantidad de partidos jugados es mayor a 10, la cantidad de goles convertidos son mayores a 30 y los puntos del torneo son mayores a 100, se puede
-///decir que el equipo puede ser campeón)
+///decir que el equipo puede ser campeón);
 ///
 ///b) la función "TablaDePosiciones()" (esta función ordena y muestra todos los datos de los equipos según puntos los puntos del torneo de mayor a menor,
 ///además debe realizar un aumento del 20% a los puntos de los equipos que tengan menos de 40 puntos)
 ///
-///c) la función "NoLoConsigue" (Esta función muestra todos los datos del equipo que menos goles tenga)
+///c) la función "NoLoConsigue" (Esta función muestra todos los datos del equipo que menos goles tenga);
+///
 namespace ConsoleApp68
 {
-    internal class Program
+    internal class
+
+        Program
     {
         static void Leer(int a, string[] Nombres, int[] goles, int[] puntTorn, int[] partidoscant)
         {
@@ -33,7 +35,8 @@ namespace ConsoleApp68
         }
         static void PosibleCampeon(int a, string[] Nombres, int[] goles, int[] puntTorn, int[] partidoscant)
         {
-            for (int i = 0; i< a; i++) 
+
+            for (int i = 0; i < a; i++)
             {
                 if (partidoscant[i] > 10 && goles[i] > 30 && puntTorn[i] > 100)
                 {
@@ -44,8 +47,9 @@ namespace ConsoleApp68
                 else
                 {
                     Console.WriteLine("");
-                    Console.WriteLine("El equipo  : " + Nombres[i] + "  No un posible ganador");
+                    Console.WriteLine(Nombres[i]);
                     Console.WriteLine("");
+
                 }
             }
 
@@ -54,7 +58,7 @@ namespace ConsoleApp68
         static void TablaDePosiciones(int a, string[] Nombres, int[] goles, int[] puntTorn, int[] partidoscant)
         {
             string aux1;
-            int aux2,aux3,aux4;
+            int aux2, aux3, aux4;
 
             for (int i = 1; i < a; i++)
             {
@@ -80,12 +84,16 @@ namespace ConsoleApp68
                     }
                 }
             }
+            for (int f = 0; f < a; f++)
+            {
+                puntTorn[f] = puntTorn[f] + puntTorn[f] * 20 / 100;
+            }
 
             Console.Clear();
             Console.WriteLine("Tabla de posiciones  :  ");
             for (int f = 0; f < a; f++)
             {
-                
+
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("Equipo : " + Nombres[f]);
@@ -98,45 +106,45 @@ namespace ConsoleApp68
         static void NoLoConsigue(int a, string[] Nombres, int[] goles, int[] puntTorn, int[] partidoscant)
         {
 
-                int posmenor = 0;
-                int mayor = goles[0];
+            int posmenor = 0;
+            int mayor = goles[0];
 
-                for (int p = 0; p < a; p++)
+            for (int p = 0; p < a; p++)
+            {
+                if (mayor > goles[p])
                 {
-                    if (mayor > goles[p])
-                    {
 
-                        posmenor = p;
-
-                    }
+                    posmenor = p;
 
                 }
 
-                Console.Clear();
-                Console.WriteLine("");
-                Console.WriteLine("El equipo que no lo consigue es... ");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("Equipo : " + Nombres[posmenor]);
-                Console.WriteLine("Puntos : " + puntTorn[posmenor]);
-                Console.WriteLine("Goles  : " + goles[posmenor]);
-                Console.WriteLine("Cantidad de partidos : " + partidoscant[posmenor]);
-                Console.WriteLine("");
+            }
+
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("El equipo que no lo consigue es... ");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Equipo : " + Nombres[posmenor]);
+            Console.WriteLine("Puntos : " + puntTorn[posmenor]);
+            Console.WriteLine("Goles  : " + goles[posmenor]);
+            Console.WriteLine("Cantidad de partidos : " + partidoscant[posmenor]);
+            Console.WriteLine("");
         }
-        
-            static void Main(string[] args)
+
+        static void Main(string[] args)
         {
 
             int a;
             Console.WriteLine("Ingrese cantidad de equipos ");
             a = int.Parse(Console.ReadLine());
-            
+
             string[] Nombres = new string[a];
             int[] goles = new int[a];
             int[] puntTorn = new int[a];
             int[] partidoscant = new int[a];
 
-            Leer(a,Nombres,goles,puntTorn,partidoscant);
+            Leer(a, Nombres, goles, puntTorn, partidoscant);
             Console.WriteLine("Pulse una letra para ir a PosibleCampeon ");
             Console.ReadKey();
 
