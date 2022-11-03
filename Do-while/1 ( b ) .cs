@@ -24,6 +24,7 @@ namespace ConsoleApp1
             int optorta;
             int opalmuerzo;
             int opbebida;
+            int
 
             do
             {

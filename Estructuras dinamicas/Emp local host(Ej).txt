@@ -1,0 +1,4 @@
+    ///1. Para la empresa "local host" se necesita desarrollar un software que ayude a tenrer control de sus empleados. Existen dos sectores importantes en la organización que son recursos humanos y ventas, para identificar a sus empleados existe un id diferente para cada sector y datos personales. Se necesitan desarrollar las siguientes funcionalidades
+    ///A. Ordenar ambos sectores (Esta función ordena ambos sectores por id de empleado de menor a mayor) (mostrar)
+    ///B. El mejor empleado (Esta función compara todas las horas trabajadas de los empleados de la organización y muestra por pantalla al empleado con más horas trabajadas y el sector al cuál pertenece)
+    ///C. Ventas totales (Esta función realiza la suma de todas las ventas realizadas, calcula las ganancias multiplicando las ventas por 5.500, calcula las ganancias obtenidas por cada vendedor e indica cual es el vendedor con mayor número de ventas)

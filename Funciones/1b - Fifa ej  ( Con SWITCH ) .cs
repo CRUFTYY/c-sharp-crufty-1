@@ -163,7 +163,8 @@ namespace ConsoleApp68
                 Console.WriteLine("Ingrese una opcion ");
                 op = int.Parse(Console.ReadLine());
 
-                switch (op){
+                switch (op)
+                {
                     case 1:
 
                         Console.Clear();
@@ -172,6 +173,7 @@ namespace ConsoleApp68
                         Console.ReadKey();
 
                         break;
+
                     case 2:
 
                         Console.Clear();
@@ -180,6 +182,7 @@ namespace ConsoleApp68
                         Console.ReadKey();
 
                         break;
+
                     case 3:
 
                         Console.Clear();
@@ -189,17 +192,16 @@ namespace ConsoleApp68
 
                         break;
 
-                    case 4:
+                    default:
+                        Console.WriteLine("");
+                        Console.WriteLine("El valor ingresado es invalido (like you) , Vuelva a ingresar un valor.");
+                        Console.WriteLine("");
 
                         break;
+
                 }
             }
             while (op != 6);
-                
-            
-
-
-
         }
     }
 }
