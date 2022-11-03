@@ -1,202 +1,262 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
-using static ConsoleApp79.Program;
 
-namespace ConsoleApp79
+namespace ConsoleApplication1
 {
-    ///1. Para la empresa "local host" se necesita desarrollar un software que ayude a tenrer control de sus empleados. Existen dos sectores importantes en la organización que son recursos humanos y ventas, para identificar a sus empleados existe un id diferente para cada sector y datos personales. Se necesitan desarrollar las siguientes funcionalidades
-    ///A. Ordenar ambos sectores (Esta función ordena ambos sectores por id de empleado de menor a mayor) (mostrar)
-    ///B. El mejor empleado (Esta función compara todas las horas trabajadas de los empleados de la organización y muestra por pantalla al empleado con más horas trabajadas y el sector al cuál pertenece)
-    ///C. Ventas totales (Esta función realiza la suma de todas las ventas realizadas, calcula las ganancias multiplicando las ventas por 5.500, calcula las ganancias obtenidas por cada vendedor e indica cual es el vendedor con mayor número de ventas)
-    internal class Program
+    class Program
     {
-        public struct recursoshumanos{
-            public int id;
-            public int dni;
-            public int horas;
-        };
         public struct ventas
         {
             public int id;
-            public int dni;
+            public float vent;
             public int horas;
-            public int venta;
-        };
-
-        static void Leer(ventas[] ventas, recursoshumanos[] recursoshumanos1, int cantrecursos, int cantventas) 
-        {
-            for (int i = 0; i < cantrecursos; i++)
-            {
-                Console.WriteLine("Ingrese el ID del empleado de recursos humanos           " + (i + 1));
-                recursoshumanos1[i].id = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Ingrese el DNI del empleado de recursos humanos          " + (i + 1));
-                recursoshumanos1[i].dni = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Ingrese el horas del empleado de recursos humanos        " + (i + 1));
-                recursoshumanos1[i].horas = int.Parse(Console.ReadLine());
-            }
-            for (int o = 0; o < cantventas; o++)
-            {
-                Console.WriteLine("Ingrese el ID del empleado de ventas                     " + (o + 1));
-                ventas[o].id = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Ingrese el DNI del empleado de ventas                    " + (o + 1));
-                ventas[o].dni = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Ingrese el horas del empleado de ventas                  " + (o + 1));
-                ventas[o].horas = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Ingrese la cantidad de ventas del empleado de ventas     " + (o + 1));
-                ventas[o].venta = int.Parse(Console.ReadLine());
-            }
 
         }
-        static void Ordenar(ventas[] ventas, recursoshumanos[] recursoshumanos1, int cantrecursos, int cantventas)
+
+        public struct rec
         {
-            int aux1,aux2,auxa, auxb;
-            for (int j = 0; j > cantventas; j++)
-            {
-                for (int k = 1; k > cantventas - 1; k++)
-                {
-                    if (ventas[k].id > ventas[k + 1].id)
-                    {
-                        aux1 = ventas[k].id;
-                        ventas[k].id = ventas[k + 1].id;
-                        ventas[k + 1].id = aux1;
-                    }
-                }
-            }
-            for (int j = 0; j < cantventas; j++)
-            {
-                for (int k = 1; k < cantventas - 1; k++)
-                {
-                    if (recursoshumanos1[k].id > recursoshumanos1[k + 1].id)
-                    {
-                        auxa = recursoshumanos1[k].id;
-                        recursoshumanos1[k].id = recursoshumanos1[k + 1].id;
-                        recursoshumanos1[k + 1].id = auxa;
+            public int id;
+            public int horas;
 
-                        auxb = recursoshumanos1[k].horas;
-                        recursoshumanos1[k].horas = recursoshumanos1[k + 1].horas;
-                        recursoshumanos1[k + 1].id = auxb;
-                    }
-                }
-            }
-            for (int s = 0; s < cantventas; s++)
+        }
+
+        static void pedir(ventas[] ventas1, rec[] rec1, int cantr, int cantv)
+        {
+
+            for (int i = 0; i < cantv; i++)
             {
-                Console.WriteLine("El empleado de ventas");
-                Console.WriteLine("Id: " + ventas[s].id);
-                Console.WriteLine("Trabaja : " + ventas[s].horas);
-                Console.WriteLine("Dni : " + ventas[s].dni);
-                Console.WriteLine("Cantidad de ventas : " + ventas[s].venta);
+                Console.WriteLine("Ingrese id del empleado de Ventas");
+                ventas1[i].id = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese las ventas del empleado");
+                ventas1[i].vent = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese horas del empleado");
+                ventas1[i].horas = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = 0; i < cantr; i++)
+            {
+                Console.WriteLine("Ingrese id del empleado de Recursos Humanos");
+                rec1[i].id = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese horas del empleado");
+                rec1[i].horas = int.Parse(Console.ReadLine());
+            }
+
+
+
+        }
+
+
+
+        static void ordenar(ventas[] ventas1, rec[] rec1, int cantr, int cantv)
+        {
+
+            int idv = ventas1[0].id;
+            int idr = rec1[0].id;
+            int hv = ventas1[0].horas;
+            int hr = rec1[0].horas;
+            int auxv;
+            int auxvh;
+            int auxr;
+            int auxrh;
+
+            for (int j = 1; j < cantv; j++)
+            {
+                for (int k = 0; k < cantv - 1; k++)
+                {
+                    if (ventas1[k].id > ventas1[k + 1].id)
+                    {
+                        auxv = ventas1[k].id;
+                        ventas1[k].id = ventas1[k + 1].id;
+                        ventas1[k + 1].id = auxv;
+
+                        auxvh = ventas1[k].horas;
+                        ventas1[k].horas = ventas1[k + 1].horas;
+                        ventas1[k + 1].id = auxvh;
+
+
+                    }
+
+
+
+                }
+
 
             }
-            for (int s = 0; s < cantventas; s++)
+
+
+
+            for (int j = 1; j < cantv; j++)
             {
-                Console.WriteLine("El empleado de recursos humanos");
-                Console.WriteLine("Id: " + recursoshumanos1[s].id);
-                Console.WriteLine("Trabaja : " + recursoshumanos1[s].horas);
-                Console.WriteLine("Dni : " + recursoshumanos1[s].dni);
+                for (int k = 0; k < cantv - 1; k++)
+                {
+                    if (rec1[k].id > rec1[k + 1].id)
+                    {
+                        auxr = rec1[k].id;
+                        rec1[k].id = rec1[k + 1].id;
+                        rec1[k + 1].id = auxr;
+
+                        auxrh = rec1[k].horas;
+                        rec1[k].horas = rec1[k + 1].horas;
+                        rec1[k + 1].id = auxrh;
+
+
+                    }
+
+
+
+                }
+
+
             }
-            Console.WriteLine("Pulse una letra para continuar");
+
+            for (int s = 0; s < cantv; s++)
+            {
+
+                Console.WriteLine("El empleado de ventas ID: " + ventas1[s].id + " Trabaja: " + ventas1[s].horas);
+
+            }
+
+            for (int s = 0; s < cantv; s++)
+            {
+
+                Console.WriteLine("El empleado de Recursos ID: " + rec1[s].id + " Trabaja: " + rec1[s].horas);
+
+            }
+
             Console.ReadKey();
+
+
         }
 
-        static void ventastotales(ventas[] ventas, recursoshumanos[] recursoshumanos1, int cantrecursos, int cantventas, int postmenor,int postmayor)
+
+        static void mejor(ventas[] ventas1, rec[] rec1, int cantr, int cantv)
         {
-            int mayor = ventas[0].venta;
-            int posmayor = 0;
+            int idv = ventas1[0].id;
+            int idr = rec1[0].id;
+            int hv = ventas1[0].horas;
+            int hr = rec1[0].horas;
 
-            float ganancia;
-            float ventastotales;
-
-            for (int i = 0; i < cantventas; i++)
+            for (int i = 0; i < cantv; i++)
             {
-                ventas[i].venta = ventas[i].venta + ventas[i].venta;
-            }
-            
-            for (int contador = 0; contador < cantventas; contador++)
-            {
-                if (mayor < ventas[contador].venta)
+                if (hv < ventas1[i].horas)
                 {
 
-                    posmayor = contador;
+                    hv = ventas1[i].horas;
+                    idv = ventas1[i].id;
+                }
+            }
+
+            for (int i = 0; i < cantv; i++)
+            {
+                if (hr < rec1[i].horas)
+                {
+
+                    hr = rec1[i].horas;
+                    idr = rec1[i].id;
+                }
+
+
+            }
+
+            if (hv < hr)
+            {
+
+                Console.WriteLine("El mejor empleado pertenece a REC y es: " + idr + " Con " + hr + " horas trabajadas");
+
+
+            }
+            else
+            {
+
+                Console.WriteLine("El mejor empleado pertenece a Ventas y es: " + idv + " Con " + hv + " horas trabajadas");
+            }
+            Console.ReadKey();
+
+        }
+
+
+        static void ventast(ventas[] ventas1, int cantv)
+        {
+
+            float ventastotales = 0;
+            float ganancia;
+            int mv = ventas1[0].id;
+            float mg = ventas1[0].vent;
+            float ganan;
+            float ganant=0;
+
+            for (int i = 0; i < cantv; i++)
+            {
+
+                ventastotales = ventastotales + ventas1[i].vent;
+                if(mg < ventas1[i].vent)
+                {
+                    mg = ventas1[i].vent;
+                    mv = ventas1[i].id;
 
                 }
 
+                ganan = ventas1[i].vent * 5500;
+                ganant=ganan+ganant;
+
+
             }
-            
-            Console.WriteLine("");
-            Console.WriteLine("Mayor");
-            Console.WriteLine("");
-            Console.WriteLine("El empleado de ventas");
-            Console.WriteLine("Id: " + ventas[posmayor].id);
-            Console.WriteLine("Trabaja : " + ventas[posmayor].horas);
-            Console.WriteLine("Dni : " + ventas[posmayor].dni);
-            Console.WriteLine("Cantidad de ventas : " + ventas[posmayor].venta);
+
+            Console.WriteLine("Hay un total de " + ganant + " ganancias y el masximo vendedor es: " + mv + " con " + mg + " ventas");
+            Console.ReadKey();
+
+
 
 
         }
+
+
         static void Main(string[] args)
         {
             int op;
-            int cantventas;
-            int cantrecursos;
+            int cantv;
+            int cantr;
+            Console.WriteLine("ingrese cant de empleados en ventas");
+            cantv = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("ingrese cantidad de empleados en ventas");
-            cantventas = int.Parse(Console.ReadLine());
+            Console.WriteLine("ingrese cant de empleados en REC");
+            cantr = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("ingrese cantidad de empleados en recursos humanos");
-            cantrecursos = int.Parse(Console.ReadLine());
+            ventas[] ventas1;
+            ventas1 = new ventas[cantv];
+            rec[] rec1;
+            rec1 = new rec[cantr];
 
-            ventas[] ventas;
-            ventas = new ventas[cantventas];
-            recursoshumanos[] recursoshumanos1;
-            recursoshumanos1 = new recursoshumanos[cantrecursos];
 
-            Leer(ventas, recursoshumanos1, cantrecursos, cantventas);
-            Console.WriteLine("");
-            Console.WriteLine("Pulsa una letra para ir al menu ");
-            Console.ReadKey();
+            pedir(ventas1, rec1, cantr, cantv);
+
+
             do
             {
-                Console.WriteLine("                     ");
-
-                Console.WriteLine("1 - Ordenar          ");
-                Console.WriteLine("2 - Mejor Empleado   ");
-                Console.WriteLine("3 - Ventas totales   ");
-                Console.WriteLine("4 - SALIR            ");
-
-                Console.WriteLine("                     ");
-
-                Console.WriteLine("Ingrese una opcion");
+                Console.WriteLine("1-Ordenar");
+                Console.WriteLine("2-Mejor Empleado");
+                Console.WriteLine("3-Ventas totales");
                 op = int.Parse(Console.ReadLine());
-
                 switch (op)
                 {
                     case 1:
-                        Ordenar(ventas, recursoshumanos1, cantrecursos, cantventas);
+                        ordenar(ventas1, rec1, cantr, cantv);
                         break;
+
                     case 2:
-
+                        mejor(ventas1, rec1, cantr, cantv);
                         break;
+
                     case 3:
-                        ventastotales(ventas, recursoshumanos1, cantrecursos, cantventas);
-                        break;
+                        ventast(ventas1, cantv); break;
+
                 }
-            }
-
-            while (op != 4);
-        }
-
-        private static void ventastotales(ventas[] ventas, recursoshumanos[] recursoshumanos1, int cantrecursos, int cantventas)
-        {
-            throw new NotImplementedException();
+            } while (op < 4);
         }
     }
 }
