@@ -1,0 +1,10 @@
+
+En una casa de comida se deben realizar un control de stock instantáneo que me permita consultar cuanto stock disponible hay minuto a minuto.
+Para eso se desean desarrollar las siguientes funcionalidades:
+1)	Funcion CargaTodosLosProductos(En esta función se me va a permitir cargar todos los tipos de productos con los que cuenta la casa de comida tanto en Bebidas, Comidas y Postres (6 de cada uno)).
+
+2)	Funcion Tomarpedido(Esta función toma un pedido y actualiza el stock de postres,comidas y bebidas disponibles.En caso de no querer alguno no se realizara ninguna modifcacion).
+
+3)	Funcion MostrarStock(Esta Funcion Muestra en 3 Columnas separadas y ordenadas las comidas,bebidas y postres).
+
+4)	Funcion OrdenarStock(Esta Funcion Ordenara todos los stocks según la cantidad que haya de cada uno.)

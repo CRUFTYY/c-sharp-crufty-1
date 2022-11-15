@@ -1,0 +1,10 @@
+﻿En una empresa de transporte la cual tiene 2 recorridos (R1 – 4hs / R2 – 5hs), por cada recorrido se realizan boletos de corta, media y larga distancia (a- $28, b-$31, c - $67). Se conocen de cada chofer los siguientes datos (IdChofer-Nombre-recorrido-duracion-antigüedad-sueldobasico-vueltas-total de boletos vendidos de cada tipo).
+Deben realizar las siguientes funciones:
+
+a SueldoEmpleadopordia(En esta función se tiene en cuenta la cantidad de vueltas, el recorrido realizado y la antigüedad, sueldo básico. En base a eso, se multiplican la cantidad de vueltas por el recorrido realizado y teniendo en cuenta la antigüedad y se le suma al sueldo básico un porcentaje (hasta 5años – 10%, hasta 10 años-20%, + de 20 años – 40%))
+
+b TotalrecaudadodepordiaporRecorrido (En esta función se necesitan saber la cantidad de dinero que ingreso a la empresa mediante los choferes que realizaron tanto el R1, como el R2).
+
+c mostrarListadoSegunId (Esta función ordena a los choferes según su idChoferes de mayor a menor y los muestra)
+
+d MejoryPeorpagos(Esta función calcula y muestra el mejor y el peor salario obtenido entre los choferes) (Mostrar todos los atributos de cada uno de esos choferes)

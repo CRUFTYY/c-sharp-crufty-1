@@ -1,0 +1,6 @@
+       /// Un argentum online necesita desarrollar las siguientes funcionalidades
+      /// A. Facción a la que pertenece (Esta función va a permitir determinar a que facción pertenece un personaje, determinada por la cantidad de criminales/ciudadanos eliminados. Para pertenecer a la "Armada Real" debera tener 150 o más criminales eliminados y 0 ciudadanos eliminados y para pertenecer a la "Legión Oscura" deberá tener 200 ciudadanos eliminados, determinada su facción se asignará un status a cada personaje)
+     /// B. Asignar Cualidades (Esta función carga todas las cualidades de los distintos miembros faccionarios)
+    /// C. Aumento Armadas Reales (Los personajes con status "Armada" tendran un incremento del 25% en sus habilidades a caballo, arquería y navegación)
+   /// D. Aumento Legiones (Los personajes de status "legión" tendran un aumento del 20% en su poder de habilidad, fuerza y celeridad)
+  /// E. Encuentro Final (Esta función suma el total de habilidades a caballo y arqueria de todas las armadas, el total de poder de habilidad y fuerza de todos los legiones. Se compararan los resultados y se determinará quien es el ganador de la batalla, al ganador se le asignará un 30% más a sus habilidades
